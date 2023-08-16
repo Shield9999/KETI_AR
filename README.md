@@ -1,7 +1,11 @@
 # KETI_ar
 
 
-# Preparing Datasets
+## Requirements
+``` sh
+pip install -r requirements.txt
+```
+
 ## Data preprocessing
 Root set up on main2.py
 * Image root line 16 ```root = '/syn_mnt/dataset/keti_ssl/0930_data/'.``` 
@@ -12,6 +16,7 @@ Root set up on main2.py
 ``` sh
 $ python main2.py
 ```
+
 ## Training & Evaluation
 To train the model
 Specify root
@@ -21,7 +26,6 @@ Specify root
 ``` sh
 $ python train_KETI.py
 ```
-
 
 To evaluate the performance on a validation set
 * Cropped image: Line 90 ``` imagepath = '/share_home/slurmjyj/KETI_demo/cropped0930/' ```
