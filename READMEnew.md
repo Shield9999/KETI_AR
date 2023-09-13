@@ -33,6 +33,8 @@ To evaluate the performance on a validation set
 ``` sh
 visualization_new.ipynb
 Second Block
-* Cropped image:  ``` imagepath = '/share_home/slurmjyj/KETI_demo/cropped0930/' ```
-* Pickle path: ``` picklepath = 'keti_dataset_0930.pkl' ```
+* Put the particular object class : ``` item= 'person' ```
+* Cropped image:  ``` '/share_home/toolkit/datasets/ketivg/cropped_images/'' ```
+* Pickle path: ``` picklepath = 'VG230809_pkl/VG_dataset_%s.pkl' %item ```
+* Model path : ``` state_dict_parallel = torch.load('VG230809_pth/%s/best_mA_0826.pth' %item, map_location=lambda storage, loc: storage) ```
 ```
