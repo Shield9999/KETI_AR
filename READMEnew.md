@@ -29,10 +29,9 @@ Third Block
 * Save model of best mA: ```torch.save(model.state_dict(), 'VG230809_pth/%s/best_mA_0829.pth' %item)``` 
 ```
 To evaluate the performance on a validation set
+``` sh
 visualization_new.ipynb
 Second Block
 * Cropped image:  ``` imagepath = '/share_home/slurmjyj/KETI_demo/cropped0930/' ```
 * Pickle path: ``` picklepath = 'keti_dataset_0930.pkl' ```
-``` sh
-$python infer_KETI.py
 ```
