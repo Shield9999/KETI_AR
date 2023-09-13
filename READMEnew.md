@@ -6,29 +6,33 @@ pip install -r requirements.txt
 ```
 
 ## Data preprocessing
-Root set up on preprocess_main_new.ipynb
+Root set up 
+``` sh
+preprocess_main_new.ipynb
 First Block
 * data_root 16 ```root = '/share_home/toolkit/datasets/ketivg/'.``` 
-
+```
+``` sh
 Second Block
 * variable 'items' put the object you want```
 * Save pickle file ```pickle_file_dir = 'VG230809_pkl/VG_dataset_%s.pkl' %item```
-  
+```
 
 ## Training & Evaluation
 To train the model
-Specify root for the train_new.ipynb
+Specify root 
+``` sh
+train_new.ipynb
 Third Block
-* Cropped image:  ```/share_home/toolkit/datasets/ketivg/cropped_images/'```
+* Cropped image:  ```imagepath = /share_home/toolkit/datasets/ketivg/cropped_images/'```
 * Pickel path :  ```picklepath = 'VG230809_pkl/VG_dataset_%s.pkl' %item'```
 * Save model of best mA: ```torch.save(model.state_dict(), 'VG230809_pth/%s/best_mA_0829.pth' %item)``` 
-``` sh
-$ python train_KETI.py
 ```
-
 To evaluate the performance on a validation set
-* Cropped image: Line 90 ``` imagepath = '/share_home/slurmjyj/KETI_demo/cropped0930/' ```
-* Pickle path: Line 91 ``` picklepath = 'keti_dataset_0930.pkl' ```
+visualization_new.ipynb
+Second Block
+* Cropped image:  ``` imagepath = '/share_home/slurmjyj/KETI_demo/cropped0930/' ```
+* Pickle path: ``` picklepath = 'keti_dataset_0930.pkl' ```
 ``` sh
 $python infer_KETI.py
 ```
